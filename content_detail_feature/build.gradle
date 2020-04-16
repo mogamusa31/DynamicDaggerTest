@@ -23,6 +23,10 @@ android {
             proguardFiles 'proguard-rules-dynamic-features.pro'
         }
     }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 }
 
 dependencies {
@@ -44,7 +48,6 @@ dependencies {
 
     implementation "com.airbnb.android:epoxy:$epoxy_version"
     implementation "com.airbnb.android:epoxy-databinding:$epoxy_version"
-    implementation "com.google.firebase:firebase-firestore:$firestore_version"
     kapt "com.airbnb.android:epoxy-processor:$epoxy_version"
     implementation "com.github.bumptech.glide:glide:$glide_version"
     kapt "com.github.bumptech.glide:compiler:$glide_version"
@@ -59,4 +62,7 @@ dependencies {
     androidTestImplementation 'androidx.test:runner:1.1.1'
     androidTestImplementation 'androidx.test:rules:1.1.1'
     testImplementation 'org.mockito:mockito-core:1.10.19'
+
+    // check targeting library
+    implementation "com.google.ar.sceneform.ux:sceneform-ux:1.15.0"
 }

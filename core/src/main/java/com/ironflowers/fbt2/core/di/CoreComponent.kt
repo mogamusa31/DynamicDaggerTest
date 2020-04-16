@@ -1,7 +1,6 @@
 package com.ironflowers.fbt2.core.di
 
 import android.content.Context
-import com.google.firebase.firestore.FirebaseFirestore
 import com.ironflowers.fbt2.core.data.remote.content.RemoteContentRepo
 import com.ironflowers.fbt2.core.domain.content.ContentUseCases
 import com.ironflowers.fbt2.core.ui.common.DispatchersProvider
@@ -21,7 +20,6 @@ interface CoreComponent {
      */
 
     fun context(): Context
-    fun firebaseFirestore(): FirebaseFirestore
     fun remoteContentRepo(): RemoteContentRepo
     fun contentUseCases(): ContentUseCases
     fun provideDispatchersProvider(): DispatchersProvider
